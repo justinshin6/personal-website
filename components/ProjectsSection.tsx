@@ -6,27 +6,28 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
-    name: "Thankful Thoughts",
+    name: "The Shin Guards Blog",
     description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+      "Personal blog where I write articles on computer science, soccer, and productivity topics that I enjoy!",
+    image: "/shin-guards.png",
+    github: "https://github.com/justinshin6/personal-blog",
+    link: "https://personal-blog-justinshin6.vercel.app/",
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    name: "Dorms@Brown",
+    description: "Final Project made with three other students that provides an all-in-one application that contains all relevant information for housing options at Brown University.",
+    image: "/dorms-at-brown.png",
+    github: "https://github.com/Dorms-Brown/Dorms-Brown.github.io",
+    link: "none",
   },
   {
-    name: "Kator Family Photos",
+    name: "Search",
     description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
+      "Created search engine from scratch using Google's PageRank Algorithm that ouputs top 10 most relevant documents per query.",
+      
+    image: "/search.png",
+    github: "https://github.com/justinshin6/Search-Engine",
+    link: "none",
   },
 ]
 
@@ -45,7 +46,7 @@ const ProjectsSection = () => {
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                   <div className=" md:w-1/2">
-                    <Link href={project.link}>
+                    <Link href={project.link == "none" ? project.github : project.link}>
                       <Image
                         src={project.image}
                         alt=""
@@ -67,12 +68,14 @@ const ProjectsSection = () => {
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
                       </Link>
+                      {project.link != "none" ?
                       <Link href={project.link} target="_blank">
                         <BsArrowUpRightSquare
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
-                      </Link>
+                      </Link> : <></>}
+
                     </div>
                   </div>
                 </div>
