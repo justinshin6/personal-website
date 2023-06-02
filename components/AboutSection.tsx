@@ -41,9 +41,15 @@ const AboutSection = () => {
             </p>
             <br />
             <p>
+              Previously when it comes to experience, I was a <span className="font-bold">{"Software Engineer Intern @ Siege"}</span> in Providence, RI. I
+              also was an Undergraduate Teaching Assistant (UTA) for <span className="font-bold">{"CSCI0220: Discrete Mathematics and Probability"}</span> in Spring 2023, and 
+              I will also be a UTA for <span className="font-bold">{"CSCI0200: Data Structures and Algorithms"}</span> in Fall 2023. I've also been a personal tutor in Python, Java, and soccer 
+              fundamentals for over five years. 
+            </p>
+            <br/>
+            <p>
               Besides coding, in my free time at college, I am the Vice President of Brown's Korean-American Student's Association (Brown KASA)
-              and a member of the Brown Men's Club Soccer Team as an attacking midfielder. For hobbies, I love video editing and filming videos, playing
-              pickup soccer with friends, playing piano, and trying new restaurants around me. Feel free to reach out anytime!  
+              and a member of the Brown Men's Club Soccer Team. For hobbies, I love video editing and filming videos, playing piano, and trying new restaurants around me. Feel free to reach out anytime!  
               
             </p>
 
@@ -68,7 +74,7 @@ const AboutSection = () => {
               alt=""
               width={325}
               height={325}
-              className="hidden bg-transparent md:block md:relative md:bottom-4 md:left-32 md:z-0"
+              className="hidden bg-transparent md:block md:relative md:top-4 md:left-32 md:z-0"
             /> */}
           </div>
         </div>
