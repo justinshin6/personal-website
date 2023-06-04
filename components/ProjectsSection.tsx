@@ -23,6 +23,22 @@ const projects = [
     link: "none",
   },
   {
+    name: "Binary Logistic Regression (BLR)",
+    description: "Implemented BLR with Tikhonov regularization (L2 norm) and cross-validation to perform classification to predict whether or not a given patient has breast cancer based on health data with over 84% accuracy.",
+    tech: "Python, Numpy, Pandas, Matplotlib",
+    image: "/ml.png",
+    github: "https://github.com/justinshin6/python_projects/tree/main/machine-learning/binary-logistic-regression",
+    link: "none",
+  },
+  {
+    name: "Caching I/O",
+    description: "Implemented single slot cache to reduce the number of system calls (i.e., buffered read, write, flush) to optimize performance to within 5x of stdio's runtime performance.",
+    tech: "C",
+    image: "/caching.png",
+    github: "https://github.com/justinshin6/C-projects/tree/main/caching",
+    link: "none",
+  },
+  {
     name: "Search",
     description:
       "Created search engine from scratch using Google's PageRank Algorithm that ouputs top 10 most relevant documents per query.",
@@ -31,6 +47,14 @@ const projects = [
     github: "https://github.com/justinshin6/Search-Engine",
     link: "none",
   },
+  {
+    name: "Python Personal Projects",
+    description: "Personal Python Projects and scripts that I create in my free time. Repository that contains my tutoring projects, different web-scraping projects with Beautiful Soup, and machine learning projects all compiled in one place.",
+    tech: "Python, Beautiful Soup, Spotify API, Numpy, Pandas, Matplotlib",
+    image: "/python.png",
+    github: "https://github.com/justinshin6/python_projects",
+    link: "none",
+  }
 ]
 
 const ProjectsSection = () => {
