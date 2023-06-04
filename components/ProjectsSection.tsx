@@ -17,7 +17,7 @@ const projects = [
   {
     name: "Dorms@Brown",
     description: "Final Project made with three other students that provides an all-in-one application that contains all relevant information for housing options at Brown University.",
-    tech: "Typescript, React.js, Node.js, Tailwind CSS, Firebase",
+    tech: "Typescript, React.js, Node.js, Tailwind CSS, Firebase, Google OAuth",
     image: "/dorms-at-brown.png",
     github: "https://github.com/Dorms-Brown/Dorms-Brown.github.io",
     link: "none",
