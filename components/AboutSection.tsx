@@ -1,5 +1,7 @@
 import React from "react"
 import Image from "next/image"
+import { TiArrowForward } from "react-icons/ti"
+import Link from "next/link"
 
 const skills = [
   { skill: "Python" },
@@ -14,15 +16,39 @@ const skills = [
   { skill: "MongoDB" },
   { skill: "Node.js" },
   { skill: "Git/Github" },
+  { skill: "Postman" },
   { skill: "GraphQL" },
   { skill: "LaTeX" },
 
 ]
 
+/**
+ * @param head - head of description
+ * @param description - main description
+ */
+const aboutInfo = [
+  {
+    head: "Brown KASA",
+    description: "I'm the current Vice President for Brown's Korean-American Students Association where we hold events and panels to introduce Korean culture to members of the Brown community!",
+    link: "https://www.brownkasa.com/"
+    
+  },
+  {
+    head: "Brown Club Soccer",
+    description: "I'm a current member of the Brown Men's Club Soccer team where I play as an attacking midfielder. We are also the current 5-time Ivy League Champions beating Yale in the finals this year!",
+    link: "https://brownclubsoccer.com/results"
+  },
+  {
+    head: "Hobbies",
+    description: "Some of my other hobbies include playing piano (over 11 years), playing Word Hunt/Anagrams with friends, playing pickup soccer, karaoke, and always trying the best restaurants near me!",
+    link: "",
+  },
+]
+
 const AboutSection = () => {
   return (
     <section id="about">
-      <div className="my-12 pb-12 md:pt-16 md:pb-48">
+      <div className="my-12 pb-12 md:pt-24 md:pb-38">
         <h1 className="text-center font-bold text-4xl">
           About Me
           <hr className="w-6 h-1 mx-auto my-4 bg-sky-400 border-0 rounded"></hr>
@@ -37,26 +63,48 @@ const AboutSection = () => {
               Hi, my name is Justin and I am a rising junior at Brown University pursuing a B.S. in
               {" "}
               <span className="font-bold">{"Applied Mathematics"}</span> and {" "}
-              <span className="font-bold">{"Computer Science"}</span>!
+              <span className="font-bold">{"Computer Science"}</span> with a focus Software Principles and Data.
             </p>
             <br />
             <p>
-              Previously when it comes to experience, I was a <span className="font-bold">{"Software Engineer Intern @ Siege"}</span> in Providence, RI. I
-              also was an Undergraduate Teaching Assistant (UTA) for <span className="font-bold">{"CSCI0220: Discrete Mathematics and Probability"}</span> in Spring 2023, and 
-              I will also be a UTA for <span className="font-bold">{"CSCI0200: Data Structures and Algorithms"}</span> in Fall 2023. I've also been a personal tutor in Python, Java, and soccer 
-              fundamentals for over five years. 
+              Besides coding, some of my other passions are the following:
             </p>
-            <br/>
-            <p>
-              Besides coding, in my free time at college, I am the Vice President of Brown's Korean-American Student's Association (Brown KASA)
-              and a member of the Brown Men's Club Soccer Team. For hobbies, I love video editing and filming videos, playing piano, and trying new restaurants around me. Feel free to reach out anytime!  
-              
-            </p>
+            <ul className="mt-1.5 flex flex-col gap-3">
+              {aboutInfo.map((fact, indx) => {
+                return (
+                  <div key={indx}>
+                  <li
+                    className={"text-base flex gap-2"}
+                  >
+                    <span className="mt-1">
+                      <TiArrowForward />
+                    </span>
+                    <div className="w-full">
+                    {fact.link !== "" ? (
+                      <>
+                      <Link href={fact.link} target="_blank">
+                        <span className="text-sky-400 font-bold hover:underline 
+                        cursor-pointer "> {fact.head} </span>
+                      </Link>
+
+                      </>
+                    ) : 
+                    <span className="text-sky-400 font-bold
+                      ">{fact.head}</span>}
+                    {": " + fact.description}
+                  </div>
+
+
+                  </li>
+                </div>
+                )
+              })}
+            </ul>
 
 
           </div>
           <div className="text-center md:w-1/2 md:text-left">
-            <h1 className="text-2xl font-bold mb-6">Skills</h1>
+            <h1 className="text-2xl font-bold mb-4">Skills</h1>
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
               {skills.map((item, idx) => {
                 return (
@@ -69,13 +117,7 @@ const AboutSection = () => {
                 )
               })}
             </div>
-            {/* <Image
-              src="/hero-image.png"
-              alt=""
-              width={325}
-              height={325}
-              className="hidden bg-transparent md:block md:relative md:top-4 md:left-32 md:z-0"
-            /> */}
+
           </div>
         </div>
       </div>
