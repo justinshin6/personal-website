@@ -40,7 +40,7 @@ const aboutInfo = [
   },
   {
     head: "Hobbies",
-    description: "Some of my other hobbies include playing piano (over 11 years), playing Word Hunt/Anagrams with friends, playing pickup soccer, karaoke, and always trying the best restaurants near me!",
+    description: "Some of my other hobbies include playing piano (over 11 years), playing Word Hunt/Anagrams with friends, playing pickup soccer, karaoke, and trying the best restaurants near me!",
     link: "",
   },
 ]
@@ -63,7 +63,7 @@ const AboutSection = () => {
               Hi, my name is Justin and I am a rising junior at Brown University pursuing a B.S. in
               {" "}
               <span className="font-bold">{"Applied Mathematics"}</span> and {" "}
-              <span className="font-bold">{"Computer Science"}</span> with a focus Software Principles and Data.
+              <span className="font-bold">{"Computer Science"}</span> with a focus in Software Principles and Data.
             </p>
             <br />
             <p>

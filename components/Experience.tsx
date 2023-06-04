@@ -24,9 +24,9 @@ const backgroundInfo = [
         name: "Siege",
         duration: "Aug 2022 - Dec 2022",
         description: [
-            "Full-Stack Developer part of a team of 7-10 members that was in charge of developing web application that provides social and gamification aspects for aspiring traders.",
+            "Collaborated as a Full-Stack Developer within a 7-10 member team to develop a dynamic web application with social and gamification features for aspiring traders.",
             "Used React.js, Node.js, Next.js, OpenSSL for Authentication, and a NoSQl database to store user information.",
-            "Created REST API from scratch to retrieve information about posts, comments, and all social aspects of trading platform.",
+            "Created a RESTful API from scratch to enable seamless communication between the front-end and back-end, facilitating real-time updates for posts, comments, and other social aspects of the trading platform.",
         ],
         link: "https://www.siegetrading.com/"
 
@@ -36,7 +36,7 @@ const backgroundInfo = [
         name: "iD Tech",
         duration: "May 2022 - Aug 2022",
         description: [
-            "Led team of 19 software instructors teaching 400+ kids aged 7-17 Python fundamentals with PyGame, Lua scripting with RobloxStudio, Game Design, Object-Oriented Programming design concepts, and Adobe Photoshop",
+            "Led and managed a team of 19 software instructors, guiding them in teaching Python fundamentals with PyGame, Lua scripting with RobloxStudio, game design principles, object-oriented programming concepts, and Adobe Photoshop to over 400 students aged 7-17.",
             "Organized and directed weekly schedules and activities outside of the classroom to increase student attendance by 150%.",
         ], 
         link: "https://www.idtech.com/"
@@ -45,9 +45,9 @@ const backgroundInfo = [
         name: "Brown",
         duration: "Jan 2023 - Present",
         description: [
-            "One of 30+ UTA's chosen out of 200+ applicants (15% acceptance rate) for CSCI0220: Discrete Mathematics and Probability in Spring 2023.",
-            "One of 10 UTA's chosen out of 200+ applicants (5% acceptance rate) for CSCI0200: Data Structures and Algorithms in Fall 2023.",
-            "Held 10 combined hours of office hours and recitations weekly to assist students in debugging their programs, and solidifying concepts within the course."
+            "Selected as one of 30+ UTAs out of 200+ applicants (15% acceptance rate) for CSCI0220: Discrete Mathematics and Probability in Spring 2023.",
+            "Chosen as one of 10 UTAs out of 200+ applicants (5% acceptance rate) for CSCI0200: Data Structures and Algorithms in Fall 2023.",
+            "Conducted 10 weekly office hours and recitations to provide personalized assistance to students in debugging programs and reinforcing course concepts."
         ],
         link: "https://cs22.io/"
     }, 
@@ -64,10 +64,10 @@ const backgroundInfo = [
     {
         position: "",
         name: "Personal Tutor",
-        dueration: "June 2018 - Present",
+        duration: "June 2018 - Present",
         description: [
-            "Tutored over a dozen students aged 7-18 in numerous subjects including Python, Java, AP classes, SAT Prep, and soccer fundamentals.",
-            "Created original projects and lessons that students can complete to make the content enjoyable for them to learn.",
+            "Provided tutoring to a diverse group of over a dozen students aged 7-18 in subjects such as Python, Java, AP classes, SAT Prep, and soccer fundamentals.",
+            "Developed engaging and customized projects and lessons to enhance the learning experience and foster student enjoyment.",
         ],
         link: "https://github.com/justinshin6/python_projects"
     }
@@ -76,7 +76,7 @@ const backgroundInfo = [
 
 
 const Experience = () => {
-    
+
     const [currExp, setCurrExp] = useState(backgroundInfo[0]);
 
     /**
