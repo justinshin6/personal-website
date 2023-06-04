@@ -83,7 +83,7 @@ export default function Navbar() {
                   </Link>
                 )
               })}
-              {currTheme !== "dark" ? (
+              {currTheme === "dark" ? (
                 <button
                   onClick={() => setTheme("light")}
                   className="bg-slate-100 p-2 rounded-xl"
