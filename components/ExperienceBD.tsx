@@ -1,14 +1,16 @@
 import { TiArrowForward } from "react-icons/ti";
 import { useEffect, useState } from "react";
-
+import Link from "next/link";
 const ExperienceBD = ({ currExp }: any) => {
 
   return (
     <div>
       <h3 className="flex gap-1 font-medium text-xl font-titleFont">
         {currExp.position}
-        <span className={`tracking-wide ${currExp.position !== "" ? "text-sky-400 font-bold" : "text-base text-xl"}`}>
+        <span className={`tracking-wide ${currExp.position !== "" ? "text-sky-400 font-bold hover:underline" : "text-base text-xl hover:underline"}`}>
+          <Link href={currExp.link} target="_blank">
           {currExp.position !== "" ? " @" + currExp.name : "" + currExp.name}
+          </Link>
         </span>
       </h3>
       <p className="text-sm mt-1 font-medium text-gray">
