@@ -15,7 +15,7 @@ const backgroundInfo = [
         name: "Cisco",
         duration: "June 2023 - Present",
         description: [
-            "Current Software Engineer Intern on the Infrastructure, Cloud & Security Services (ICSS) Team!"
+            "Building the Third-Party Software Compliance and Risk Management (TPSCRM) & Open-Source Contributions (OSC) full-stack applications using React.js, Typescript, and the Spring Boot, FastAPI, and Django frameworks"
         ],
         link: "https://www.cisco.com/",
     },
