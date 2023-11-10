@@ -13,9 +13,10 @@ const backgroundInfo = [
     {
         position: "Software Engineer Intern",
         name: "Cisco",
-        duration: "June 2023 - Present",
+        duration: "June 2023 - August 2023",
         description: [
-            "Building the Third-Party Software Compliance and Risk Management (TPSCRM) & Open-Source Contributions (OSC) full-stack applications using React.js, Typescript, and the Spring Boot, FastAPI, and Django frameworks."
+            "Developed a full-stack application utilizing Typescript, React.js, and the Spring framework for Third-Party Software Compliance and Risk Management (TPSCRM), resulting in a streamlined process that reduced compliance issues by 15%.",
+            "Collaborated with Open-Source Contributions (OSC) using React.js and the FastAPI and Django frameworks, increasing the efficiency of tracking contributions while implementing new customer features."
         ],
         link: "https://www.cisco.com/",
     },
