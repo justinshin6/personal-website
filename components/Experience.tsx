@@ -1,5 +1,6 @@
 "use client" // this is a client component
 
+import { m } from "framer-motion";
 import ExperienceBD from "./ExperienceBD"
 import { useState, useEffect } from "react";
 
@@ -12,10 +13,22 @@ import { useState, useEffect } from "react";
 const backgroundInfo = [
     {
         position: "Software Engineer Intern",
-        name: "Cisco",
-        duration: "June 2023 - Present",
+        name: 'Citadel',
+        duration: "June 2024 - August 2024",
         description: [
-            "Current Software Engineer Intern on the Infrastructure, Cloud & Security Services (ICSS) Team!"
+            "Revamped pricing scenarios dashboard for the Citadel Commodities Equities team, optimizing backend functionality and adding interactive frontend features, reducing decision-making time for portfolio managers and analysts by over 99.9%.",
+            "Developed daily email notification compiling metric data on relevant stocks across different sectors while creating interactive data visualizations of fundamental model outputs from the analysts, reducing decision time by 93%.",
+            "Scraped data on transportation vehicles and developed automatic notification system that instantly alerts analysts to key trade signals, resulting in a 50% increase in PnL generation in Python and avoiding any critical information slippage.",
+            "Built an interactive dashboard from scratch, scraping and processing data on a specific geographical region, delivering insights in a user-friendly format that enabled analysts to improve the accuracy of their fundamental models by 45%.",
+        ]
+    },
+    {
+        position: "Software Engineer Intern",
+        name: "Cisco",
+        duration: "June 2023 - August 2023",
+        description: [
+            "Developed a full-stack application utilizing Typescript, React.js, and the Spring framework for Third-Party Software Compliance and Risk Management (TPSCRM), resulting in a streamlined process that reduced compliance issues by 15%.",
+            "Collaborated with Open-Source Contributions (OSC) using React.js and the FastAPI and Django frameworks, increasing the efficiency of tracking contributions while implementing new customer features."
         ],
         link: "https://www.cisco.com/",
     },
