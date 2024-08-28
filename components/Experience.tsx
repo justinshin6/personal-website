@@ -20,7 +20,8 @@ const backgroundInfo = [
             "Developed daily email notification compiling metric data on relevant stocks across different sectors while creating interactive data visualizations of fundamental model outputs from the analysts, reducing decision time by 93%.",
             "Scraped data on transportation vehicles and developed automatic notification system that instantly alerts analysts to key trade signals, resulting in a 50% increase in PnL generation in Python and avoiding any critical information slippage.",
             "Built an interactive dashboard from scratch, scraping and processing data on a specific geographical region, delivering insights in a user-friendly format that enabled analysts to improve the accuracy of their fundamental models by 45%.",
-        ]
+        ],
+        link: "https://www.citadel.com/",
     },
     {
         position: "Software Engineer Intern",
