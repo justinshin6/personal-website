@@ -16,8 +16,17 @@ const skills = [
   { skill: "MongoDB" },
   { skill: "Node.js" },
   { skill: "Git/Github" },
-  { skill: "Postman" },
+  { skill: "Docker" },
+  { skill: "Linux" },
+  { skill: "Figma" },
+  { skill: "Pandas" },
+  { skill: "Google Firebase" },
+  { skill: "Google Cloud" },
+  { skill: "AWS" },
   { skill: "GraphQL" },
+  { skill: "Django" },
+  { skill: "Plotly Dash" },
+  { skill: "Postman" },
   { skill: "LaTeX" },
 
 ]
@@ -35,7 +44,7 @@ const aboutInfo = [
   },
   {
     head: "Brown Club Soccer",
-    description: "I'm a current member of the Brown Men's Club Soccer team where I play as an attacking midfielder. We are also the current 5-time Ivy League Champions beating Yale in the finals this year!",
+    description: "I'm a current member of the Brown Men's Club Soccer team where I play as an attacking midfielder. We are also the current 6-time Ivy League Champions beating Yale in the finals this year!",
     link: "https://brownclubsoccer.com/results"
   },
   {
