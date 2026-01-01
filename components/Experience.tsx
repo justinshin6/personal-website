@@ -16,7 +16,19 @@ const backgroundInfo = [
         name: "Coinbase",
         duration: "July 2025 - Present",
         description: [
-            "Backend software engineer on the Simple Assets team"
+        "Backend software engineer on the Simple Assets team.",
+        <span key="token-sales">
+            Founding member of team that built and launched{" "}
+            <a
+            href="https://www.coinbase.com/blog/the-ideal-way-to-launch-introducing-token-sales-on-coinbase"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-400 hover:underline"
+            >
+            Coinbase Token Sales
+            </a>{" "}
+            in 3 months; first Monad sale generated $4.7M in direct revenue from $269M in requested allocations (oversubscribed by 1.43x), with 86K participants.
+        </span>
         ],
         link: "https://www.coinbase.com/"
     },
