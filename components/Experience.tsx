@@ -55,6 +55,16 @@ const backgroundInfo = [
         link: "https://www.cisco.com/",
     },
     {
+        position: "Head Undergraduate Teaching Assistant (HTA/UTA)",
+        name: "Brown",
+        duration: "Jan 2023 - May 2025",
+        description: [
+            "Selected as a Head Teaching Assistant and an Undergraduate Teaching Assistant for four computer science and three applied mathematics courses including Discrete Mathematics / Probability, Statistical Inference II, and Data Structures.",
+            "Coordinated grading meetings, managed course staff of over 30+ UTA's, and acted as touchpoint with the professor.",
+        ],
+        link: "https://cs22.io/"
+    }, 
+    {
         position: "Software Engineer Intern",
         name: "Siege",
         duration: "Aug 2022 - Dec 2022",
@@ -75,16 +85,7 @@ const backgroundInfo = [
             "Organized and directed weekly schedules and activities outside of the classroom to increase student attendance by 150%.",
         ], 
         link: "https://www.idtech.com/"
-    }, {
-        position: "Head Undergraduate Teaching Assistant (HTA/UTA)",
-        name: "Brown",
-        duration: "Jan 2023 - May 2025",
-        description: [
-            "Selected as a Head Teaching Assistant and an Undergraduate Teaching Assistant for four computer science and three applied mathematics courses including Discrete Mathematics / Probability, Statistical Inference II, and Data Structures.",
-            "Coordinated grading meetings, managed course staff of over 30+ UTA’s, and acted as touchpoint with the professor."
-        ],
-        link: "https://cs22.io/"
-    }, 
+    },
     {
         position: "Workshops Team",
         name: "Hack@Brown",
