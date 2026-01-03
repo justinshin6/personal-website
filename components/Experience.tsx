@@ -1,8 +1,7 @@
 "use client" // this is a client component
 
-import { m } from "framer-motion";
 import ExperienceBD from "./ExperienceBD"
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 /**
  * @param position - name of position of experience
@@ -122,14 +121,68 @@ const Experience = () => {
       id="experience"
       className="max-w-containerxs mx-auto py-25 lgl:py-24 px-4"
     >
-      <h1 className="text-center font-bold text-4xl">
+      <h1 className="text-center font-bold text-4xl mb-2">
         Experience
         <hr className="w-6 h-1 mx-auto my-4 bg-sky-400 border-0 rounded" />
       </h1>
 
-    <div className="w-full mt-10 flex flex-col md:flex-row gap-16">
+      <div className="w-full mt-10 flex flex-col md:flex-row gap-8 md:gap-16">
+        {/* Timeline sidebar */}
+        <div className="relative hidden md:block md:w-36">
+          {/* Vertical timeline line */}
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-sky-400 via-sky-500 to-sky-400 opacity-30"></div>
+          
+          <ul className="relative flex flex-col">
+            {backgroundInfo.map((exp, indx) => {
+              const isActive = currExp.name === exp.name;
+              return (
+                <li
+                  key={indx}
+                  onClick={() => handleClick(exp.name)}
+                  className={`
+                    relative
+                    cursor-pointer
+                    px-6
+                    py-4
+                    text-sm
+                    font-medium
+                    transition-all
+                    duration-300
+                    rounded-lg
+                    group
+                    ${
+                      isActive
+                        ? "bg-gradient-to-r from-sky-600 to-sky-500 text-white font-semibold shadow-lg shadow-sky-500/50 scale-105"
+                        : "text-neutral-600 dark:text-neutral-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-sky-400 dark:hover:text-sky-400"
+                    }
+                  `}
+                >
+                  {/* Timeline dot */}
+                  <div className={`
+                    absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2
+                    w-4 h-4 rounded-full border-2 transition-all duration-300
+                    ${
+                      isActive
+                        ? "bg-sky-400 border-sky-300 shadow-lg shadow-sky-400/50 scale-125"
+                        : "bg-white dark:bg-stone-900 border-sky-400 group-hover:scale-110 group-hover:bg-sky-100 dark:group-hover:bg-sky-900"
+                    }
+                  `}></div>
+                  
+                  <span className="relative z-10">{exp.name}</span>
+                  
+                  {/* Active indicator glow */}
+                  {isActive && (
+                    <div className="absolute inset-0 rounded-lg bg-sky-400 opacity-20 blur-xl"></div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        {/* Mobile horizontal scroll */}
         <ul
-        className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-sky-400 md:flex-col md:overflow-visible md:scrollbar-none md:w-36"
+          className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-sky-400 scrollbar-track-transparent md:hidden gap-3 pb-4"
         style={{ scrollSnapType: "x mandatory" }}
         >
         {backgroundInfo.map((exp, indx) => {
@@ -143,21 +196,18 @@ const Experience = () => {
                 flex-shrink-0
                 scroll-snap-align-start
                 cursor-pointer
-                px-8
+                  px-6
                 py-3
-                text-base
+                  text-sm
                 font-medium
-                flex
-                gap-2
-                whitespace-normal
-                transition-colors
+                  whitespace-nowrap
+                  transition-all
                 duration-300
-                min-w-[180px]
-                rounded-md
+                  rounded-lg
                 ${
                     isActive
-                    ? "bg-sky-600 border-2 border-sky-400 text-white font-semibold"
-                    : "border-2 border-transparent hover:bg-[#112240] hover:text-white"
+                      ? "bg-gradient-to-r from-sky-600 to-sky-500 text-white font-semibold shadow-lg shadow-sky-500/50"
+                      : "bg-slate-100 dark:bg-slate-800 text-neutral-700 dark:text-neutral-300 hover:bg-slate-200 dark:hover:bg-slate-700"
                 }
                 `}
             >
@@ -167,8 +217,10 @@ const Experience = () => {
         })}
         </ul>
 
-
+        {/* Experience details with animation */}
+        <div className="flex-1">
         <ExperienceBD currExp={currExp} />
+        </div>
       </div>
     </section>
   );

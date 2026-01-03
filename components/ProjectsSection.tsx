@@ -70,42 +70,59 @@ const ProjectsSection = () => {
           return (
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                  <div className=" md:w-1/2">
+                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12 group">
+                  <div className="md:w-1/2 relative overflow-hidden rounded-xl">
                     <Link href={project.link == "none" ? project.github : project.link} target="_blank">
-                      <Image
-                        src={project.image}
-                        alt=""
-                        width={1000}
-                        height={1000}
-                        className="rounded-xl shadow-xl hover:opacity-70"
-                      />
+                      <div className="relative overflow-hidden rounded-xl shadow-2xl transition-all duration-300 group-hover:shadow-sky-500/20">
+                        <Image
+                          src={project.image}
+                          alt={project.name}
+                          width={1000}
+                          height={1000}
+                          className="rounded-xl transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                      </div>
                     </Link>
                   </div>
-                  <div className="mt-8 md:w-1/2">
-                    <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
-                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                  <div className="mt-8 md:mt-0 md:w-1/2 flex flex-col justify-center">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-4 text-neutral-800 dark:text-neutral-100 group-hover:text-sky-500 dark:group-hover:text-sky-400 transition-colors duration-300">
+                      {project.name}
+                    </h1>
+                    <p className="text-lg md:text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>
-                    <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
-                    <span className="font-bold">Tech: </span> 
-                      {project.tech}
-                    </p>
+                    <div className="mb-6">
+                      <p className="text-lg md:text-xl leading-7 text-neutral-600 dark:text-neutral-400">
+                        <span className="font-bold text-sky-500 dark:text-sky-400">Tech: </span> 
+                        <span className="text-neutral-700 dark:text-neutral-300">{project.tech}</span>
+                      </p>
+                    </div>
                     <div className="flex flex-row align-bottom space-x-4">
-                      <Link href={project.github} target="_blank">
+                      <Link 
+                        href={project.github} 
+                        target="_blank"
+                        className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition-colors duration-200"
+                        aria-label="GitHub repository"
+                      >
                         <BsGithub
                           size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          className="text-neutral-700 dark:text-neutral-300 hover:text-sky-500 dark:hover:text-sky-400 transition-all duration-200 hover:-translate-y-1"
                         />
                       </Link>
-                      {project.link != "none" ?
-                      <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link> : <></>}
-
+                      {project.link != "none" && (
+                        <Link 
+                          href={project.link} 
+                          target="_blank"
+                          className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition-colors duration-200"
+                          aria-label="Live project"
+                        >
+                          <BsArrowUpRightSquare
+                            size={30}
+                            className="text-neutral-700 dark:text-neutral-300 hover:text-sky-500 dark:hover:text-sky-400 transition-all duration-200 hover:-translate-y-1"
+                          />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
