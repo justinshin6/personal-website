@@ -36,7 +36,7 @@ const AboutSection = () => {
                 Computer Systems.
               </p>
               <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                Outside of work, I like playing sports (soccer, tennis, etc.), going to the gym, and trying out different restaurants in the Bay Area.
+                Outside of work, I like playing sports (soccer, tennis, etc.), going to the gym, and trying out different restaurants in New York City.
               </p>
             </div>
           </div>
