@@ -26,7 +26,7 @@ const backgroundInfo = [
             >
             Coinbase Token Sales
             </a>{" "}
-            in 3 months; first Monad sale generated $4.7M in direct revenue from $269M in requested allocations (oversubscribed by 1.43x), with 86K participants.
+            in 3 months; first Monad sale generated $269M in requested allocations (oversubscribed by 1.43x), with 86K participants across 70+ countries.
         </span>
         ],
         link: "https://www.coinbase.com/"
